@@ -16,6 +16,7 @@ type RootStackParamList = {
 	Select: undefined;
 	Multiselect: undefined;
 	Tabs: undefined;
+	FloatingInput: undefined;
 };
 
 export const HomeScreen = () => {
@@ -111,6 +112,14 @@ export const HomeScreen = () => {
 				onPress={() => navigation.navigate("Tabs")}
 			>
 				<Text className="text-white font-semibold">Tabs Screen</Text>
+				<ArrowRight className="absolute left-4 top-3" size={20} color="white" />
+			</Pressable>
+
+			<Pressable
+				className="bg-blue-500 dark:bg-blue-700 px-6 py-3 rounded-lg flex justify-between items-center flex-row"
+				onPress={() => navigation.navigate("FloatingInput")}
+			>
+				<Text className="text-white font-semibold">Floating Input Screen</Text>
 				<ArrowRight className="absolute left-4 top-3" size={20} color="white" />
 			</Pressable>
 		</View>

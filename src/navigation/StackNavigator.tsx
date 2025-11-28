@@ -11,6 +11,7 @@ import { InputScreen } from '@/screen/components/InputScreen';
 import SelectScreen from '@/screen/components/SelectScreen';
 import MultiselectScreen from '@/screen/components/MultiselectScreen';
 import TabScreen from '@/screen/components/TabScreen';
+import FloatingInputScreen from '@/screen/components/FloatingInputScreen';
 
 
 import { useTheme } from '@/theme/ThemeProvider';
@@ -40,6 +41,7 @@ export const StackNavigator = () => {
             <Stack.Screen name="Select" component={SelectScreen} />
             <Stack.Screen name="Multiselect" component={MultiselectScreen} />
             <Stack.Screen name="Tabs" component={TabScreen} />
+            <Stack.Screen name="FloatingInput" component={FloatingInputScreen} />
         </Stack.Navigator>
     );
 }
