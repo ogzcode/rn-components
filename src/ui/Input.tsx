@@ -1,7 +1,6 @@
 import { TextInput, TextInputProps } from "react-native";
 import { useState } from "react";
 import { useTheme } from "../theme/ThemeProvider";
-import { useColorScheme } from "nativewind";
 
 type InputProps = Omit<TextInputProps, 'className'> & {
     className?: string;
