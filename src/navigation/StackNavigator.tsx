@@ -4,12 +4,15 @@ import { HomeScreen } from '@/screen/Home';
 import AvatarScreen from '@/screen/components/AvatarScreen';
 import AccordionScreen from '@/screen/components/AccordionScreen';
 import AlertScreen from '@/screen/components/AlertScreen';
-import { useTheme } from '@/theme/ThemeProvider';
 import ButtonScreen from '@/screen/components/ButtonScreen';
 import CheckboxScreen from '@/screen/components/CheckboxScreen';
 import DropdownMenuScreen from '@/screen/components/DropdownMenuScreen';
 import { InputScreen } from '@/screen/components/InputScreen';
 import SelectScreen from '@/screen/components/SelectScreen';
+import TabScreen from '@/screen/components/TabScreen';
+
+
+import { useTheme } from '@/theme/ThemeProvider';
 
 const Stack = createStackNavigator();
 
@@ -34,6 +37,7 @@ export const StackNavigator = () => {
             <Stack.Screen name="DropdownMenu" component={DropdownMenuScreen} />
             <Stack.Screen name="Input" component={InputScreen} />
             <Stack.Screen name="Select" component={SelectScreen} />
+            <Stack.Screen name="Tabs" component={TabScreen} />
         </Stack.Navigator>
     );
 }
