@@ -6,6 +6,7 @@ import AccordionScreen from '@/screen/components/AccordionScreen';
 import AlertScreen from '@/screen/components/AlertScreen';
 import { useTheme } from '@/theme/ThemeProvider';
 import ButtonScreen from '@/screen/components/ButtonScreen';
+import CheckboxScreen from '@/screen/components/CheckboxScreen';
 
 const Stack = createStackNavigator();
 
@@ -26,6 +27,7 @@ export const StackNavigator = () => {
             <Stack.Screen name="Accordions" component={AccordionScreen} />
             <Stack.Screen name="Alerts" component={AlertScreen} />
             <Stack.Screen name="Buttons" component={ButtonScreen} />
+            <Stack.Screen name="Checkboxes" component={CheckboxScreen} />
         </Stack.Navigator>
     );
 }
