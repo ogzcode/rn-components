@@ -39,7 +39,6 @@ const TabScreen: React.FC = () => {
             tabList={basicTabs}
             value={activeTab1}
             onChange={setActiveTab1}
-            variant="default"
           >
             <TabContent value="home">
               <View className="p-4 bg-blue-50 dark:bg-blue-950 rounded-md">
@@ -75,7 +74,6 @@ const TabScreen: React.FC = () => {
             tabList={profileTabs}
             value={activeTab2}
             onChange={setActiveTab2}
-            variant="underline"
           >
             <TabContent value="profile">
               <View className="p-4 bg-gray-50 dark:bg-gray-800 rounded-md">
