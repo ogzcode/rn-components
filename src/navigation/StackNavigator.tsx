@@ -7,6 +7,7 @@ import AlertScreen from '@/screen/components/AlertScreen';
 import { useTheme } from '@/theme/ThemeProvider';
 import ButtonScreen from '@/screen/components/ButtonScreen';
 import CheckboxScreen from '@/screen/components/CheckboxScreen';
+import DropdownMenuScreen from '@/screen/components/DropdownMenuScreen';
 
 const Stack = createStackNavigator();
 
@@ -28,6 +29,7 @@ export const StackNavigator = () => {
             <Stack.Screen name="Alerts" component={AlertScreen} />
             <Stack.Screen name="Buttons" component={ButtonScreen} />
             <Stack.Screen name="Checkboxes" component={CheckboxScreen} />
+            <Stack.Screen name="DropdownMenu" component={DropdownMenuScreen} />
         </Stack.Navigator>
     );
 }

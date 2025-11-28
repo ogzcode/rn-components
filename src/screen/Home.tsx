@@ -11,6 +11,8 @@ type RootStackParamList = {
 	Alerts: undefined;
 	Buttons: undefined;
 	Checkboxes: undefined;
+	DropdownMenu: undefined;
+
 };
 
 export const HomeScreen = () => {
@@ -67,6 +69,14 @@ export const HomeScreen = () => {
 				onPress={() => navigation.navigate("Checkboxes")}
 			>
 				<Text className="text-white font-semibold">Checkbox Screen</Text>
+				<ArrowRight className="absolute left-4 top-3" size={20} color="white" />
+			</Pressable>
+
+			<Pressable
+				className="bg-blue-500 dark:bg-blue-700 px-6 py-3 rounded-lg flex justify-between items-center flex-row"
+				onPress={() => navigation.navigate("DropdownMenu")}
+			>
+				<Text className="text-white font-semibold">Dropdown Menu Screen</Text>
 				<ArrowRight className="absolute left-4 top-3" size={20} color="white" />
 			</Pressable>
 		</View>
