@@ -9,6 +9,7 @@ import CheckboxScreen from '@/screen/components/CheckboxScreen';
 import DropdownMenuScreen from '@/screen/components/DropdownMenuScreen';
 import { InputScreen } from '@/screen/components/InputScreen';
 import SelectScreen from '@/screen/components/SelectScreen';
+import MultiselectScreen from '@/screen/components/MultiselectScreen';
 import TabScreen from '@/screen/components/TabScreen';
 
 
@@ -37,6 +38,7 @@ export const StackNavigator = () => {
             <Stack.Screen name="DropdownMenu" component={DropdownMenuScreen} />
             <Stack.Screen name="Input" component={InputScreen} />
             <Stack.Screen name="Select" component={SelectScreen} />
+            <Stack.Screen name="Multiselect" component={MultiselectScreen} />
             <Stack.Screen name="Tabs" component={TabScreen} />
         </Stack.Navigator>
     );
