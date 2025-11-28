@@ -1,4 +1,4 @@
-import { View, Text, Pressable } from "react-native";
+import { ScrollView, View, Text, Pressable } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import type { NavigationProp } from "@react-navigation/native";
 import { ArrowRight } from "lucide-react-native";
@@ -18,14 +18,15 @@ type RootStackParamList = {
 	Tabs: undefined;
 	FloatingInput: undefined;
 	Switch: undefined;
-
+	Textarea: undefined;
 };
 
 export const HomeScreen = () => {
 	const navigation = useNavigation<NavigationProp<RootStackParamList>>();
 	const { setTheme, theme } = useTheme();
 	return (
-		<View className="flex-1 gap-4 p-4 bg-white dark:bg-gray-900">
+		<ScrollView className="flex-1 p-4 bg-white dark:bg-gray-900" contentContainerStyle={{ paddingBottom: 40 }}>
+			<View className="gap-4">
 			<Pressable
 				className="bg-gray-900 dark:bg-gray-700 px-6 py-3 rounded-lg flex justify-between items-center flex-row"
 				onPress={() => setTheme(theme === "light" ? "dark" : "light")}
@@ -132,6 +133,15 @@ export const HomeScreen = () => {
 				<Text className="text-white font-semibold">Switch Screen</Text>
 				<ArrowRight className="absolute left-4 top-3" size={20} color="white" />
 			</Pressable>
-		</View>
+
+			<Pressable
+				className="bg-blue-500 dark:bg-blue-700 px-6 py-3 rounded-lg flex justify-between items-center flex-row"
+				onPress={() => navigation.navigate("Textarea") }
+			>
+				<Text className="text-white font-semibold">Textarea Screen</Text>
+				<ArrowRight className="absolute left-4 top-3" size={20} color="white" />
+			</Pressable>
+			</View>
+		</ScrollView>
 	);
 }
