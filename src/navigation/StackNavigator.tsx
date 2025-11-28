@@ -5,6 +5,7 @@ import AvatarScreen from '@/screen/components/AvatarScreen';
 import AccordionScreen from '@/screen/components/AccordionScreen';
 import AlertScreen from '@/screen/components/AlertScreen';
 import { useTheme } from '@/theme/ThemeProvider';
+import ButtonScreen from '@/screen/components/ButtonScreen';
 
 const Stack = createStackNavigator();
 
@@ -24,6 +25,7 @@ export const StackNavigator = () => {
             <Stack.Screen name="Avatars" component={AvatarScreen} />
             <Stack.Screen name="Accordions" component={AccordionScreen} />
             <Stack.Screen name="Alerts" component={AlertScreen} />
+            <Stack.Screen name="Buttons" component={ButtonScreen} />
         </Stack.Navigator>
     );
 }
