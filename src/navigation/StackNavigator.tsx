@@ -8,6 +8,7 @@ import { useTheme } from '@/theme/ThemeProvider';
 import ButtonScreen from '@/screen/components/ButtonScreen';
 import CheckboxScreen from '@/screen/components/CheckboxScreen';
 import DropdownMenuScreen from '@/screen/components/DropdownMenuScreen';
+import { InputScreen } from '@/screen/components/InputScreen';
 
 const Stack = createStackNavigator();
 
@@ -30,6 +31,7 @@ export const StackNavigator = () => {
             <Stack.Screen name="Buttons" component={ButtonScreen} />
             <Stack.Screen name="Checkboxes" component={CheckboxScreen} />
             <Stack.Screen name="DropdownMenu" component={DropdownMenuScreen} />
+            <Stack.Screen name="Input" component={InputScreen} />
         </Stack.Navigator>
     );
 }
