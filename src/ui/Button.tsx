@@ -19,14 +19,14 @@ const VARIANT_MAP: Record<NonNullable<ButtonProps['variant']>, { bg: string; bor
     warning: { bg: 'bg-amber-500', border: 'border-amber-500', text: 'text-amber-600', textDark: 'text-amber-300' }
 }
 
-export const Button: React.FC<ButtonProps> = ({
+export const Button = React.forwardRef<View, ButtonProps>(({
     label,
     variant = 'default',
     outline = true,
     style,
     icon = null,
     onPress
-}) => {
+}, ref) => {
     const { isDark } = useTheme()
 
     const v = VARIANT_MAP[variant]
@@ -43,11 +43,13 @@ export const Button: React.FC<ButtonProps> = ({
     const textClass = outline ? `${textColorOutline} text-sm font-medium` : `text-white text-sm font-medium`
 
     return (
-        <Pressable className={pressableClass} style={style as any} onPress={onPress}>
+        <Pressable ref={ref} className={pressableClass} style={style as any} onPress={onPress}>
             {icon ? <View className="mr-2">{icon}</View> : null}
             <Text className={textClass}>{label}</Text>
         </Pressable>
     )
-}
+})
+
+Button.displayName = 'Button'
 
 export default Button
