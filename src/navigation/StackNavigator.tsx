@@ -16,7 +16,7 @@ import SwitchScreen from '@/screen/components/SwitchScreen';
 import TextareaScreen from '@/screen/components/TextareaScreen';
 import RadioScreen from '@/screen/components/RadioScreen';
 import DialogScreen from '@/screen/components/DialogScreen';
-
+import InputOtpScreen from '@/screen/components/InputOtpScreen';
 
 import { useTheme } from '@/theme/ThemeProvider';
 
@@ -50,6 +50,7 @@ export const StackNavigator = () => {
             <Stack.Screen name="Textarea" component={TextareaScreen} />
             <Stack.Screen name="Radio" component={RadioScreen} />
             <Stack.Screen name="Dialog" component={DialogScreen} />
+            <Stack.Screen name="InputOtp" component={InputOtpScreen} />
         </Stack.Navigator>
     );
 }
