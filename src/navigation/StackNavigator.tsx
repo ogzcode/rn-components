@@ -14,6 +14,7 @@ import TabScreen from '@/screen/components/TabScreen';
 import FloatingInputScreen from '@/screen/components/FloatingInputScreen';
 import SwitchScreen from '@/screen/components/SwitchScreen';
 import TextareaScreen from '@/screen/components/TextareaScreen';
+import RadioScreen from '@/screen/components/RadioScreen';
 
 
 import { useTheme } from '@/theme/ThemeProvider';
@@ -46,6 +47,7 @@ export const StackNavigator = () => {
             <Stack.Screen name="FloatingInput" component={FloatingInputScreen} />
             <Stack.Screen name="Switch" component={SwitchScreen} />
             <Stack.Screen name="Textarea" component={TextareaScreen} />
+            <Stack.Screen name="Radio" component={RadioScreen} />
         </Stack.Navigator>
     );
 }
