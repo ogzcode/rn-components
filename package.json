@@ -23,6 +23,7 @@
     "@rn-primitives/radio-group": "^1.2.0",
     "@rn-primitives/select": "^1.2.0",
     "@rn-primitives/switch": "^1.2.0",
+    "@rn-primitives/table": "^1.2.0",
     "@rn-primitives/tabs": "^1.2.0",
     "@rn-primitives/toast": "^1.2.0",
     "expo": "^54.0.0",
