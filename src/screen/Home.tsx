@@ -1,4 +1,5 @@
 import { ScrollView, View, Text, Pressable } from "react-native";
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useNavigation } from "@react-navigation/native";
 import type { NavigationProp } from "@react-navigation/native";
 import { ArrowRight } from "lucide-react-native";
@@ -22,13 +23,18 @@ type RootStackParamList = {
 	Radio: undefined;
 	Dialog: undefined;
 	InputOtp: undefined;
+	Toast: undefined;
 };
 
 export const HomeScreen = () => {
 	const navigation = useNavigation<NavigationProp<RootStackParamList>>();
 	const { setTheme, theme } = useTheme();
+	const insets = useSafeAreaInsets();
 	return (
-		<ScrollView className="flex-1 p-4 bg-white dark:bg-gray-900" contentContainerStyle={{ paddingBottom: 40 }}>
+		<ScrollView
+			className="flex-1 p-4 bg-white dark:bg-gray-900"
+			contentContainerStyle={{ paddingBottom: insets.bottom + 24 }}
+		>
 			<View className="gap-4">
 				<Pressable
 					className="bg-gray-900 dark:bg-gray-700 px-6 py-3 rounded-lg flex justify-between items-center flex-row"
@@ -166,6 +172,14 @@ export const HomeScreen = () => {
 					onPress={() => navigation.navigate("InputOtp")}
 				>
 					<Text className="text-white font-semibold">Input OTP Screen</Text>
+					<ArrowRight className="absolute left-4 top-3" size={20} color="white" />
+				</Pressable>
+
+				<Pressable
+					className="bg-blue-500 dark:bg-blue-700 px-6 py-3 rounded-lg flex justify-between items-center flex-row"
+					onPress={() => navigation.navigate("Toast")}
+				>
+					<Text className="text-white font-semibold">Toast Screen</Text>
 					<ArrowRight className="absolute left-4 top-3" size={20} color="white" />
 				</Pressable>
 			</View>
